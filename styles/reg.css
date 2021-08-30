@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.body {
+    display: flex;
+    text-align: center;
+    place-items: center;
+    min-height: 100vh;
+    background-image: url(/images/Outrigger.jpg);
+    
+  }
+
+.reg{
+    margin: 0 auto;
+    background-color: royalblue;
+    gap: 10px;
+    width: 30%;
+    height: 70vh;
+}
+
+.form-input{
+    gap: 10px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./styles/scripts.js"></script>
+</head>
+<body>
+    <section id="landing">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bnb">Accomodation</a></li>
+            <li style="float:right"><a class="active" href="admin.html">Admin</a></li>
+            <li style="float:right"><a class="active" href="reg.html">Register</a></li>
+            <li style="float:right"><a class="active" href="login.html">Login</a></li>
+          </ul> 
+          <div>
+              <div class="land-content">
+                  <div class="fill-in">
+                      <form action="">
+                        <div>
+                            <h3 class="heading">Search for Flights</h3>
+                        </div>
+                          <div class="from">
+                              <label for="from_where"></label>
+                              <input class="f-input" type="text" placeholder="departure">
+                          </div>
+                          <div class="arrival">
+                            <label for="to_where"></label>
+                            <input class="f-input" type="text" placeholder="arrival">
+                        </div>
+                        <div class="people">
+                            <label for="adults">adults</label>
+                            <select name="adults" id="adults" aria-placeholder="Adults (18+)">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <label for="adults">chidren</label>
+                            <select name="adults" id="adults" >
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="date">
+                            <label for="date"></label>
+                            <input class="f-input" type="text" placeholder="date">
+                        </div>
+                        <button id="btn" class="f-input">
+                            <span>
+                                search
+                            </span>
+                        </button>
+                      </form>
+                  </div>
+                  <div class="about">
+                      <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, quasi dolore ratione ex ad corporis obcaecati quia nam, sequi provident harum deleniti, velit asperiores earum fugiat perspiciatis nisi consectetur odio?</p>
+                  </div>
+              </div>
+          </div>
+    </section>
+    <section id="bnb">
+        <ul>
+            <li class="lists">all</li>
+            <li class="lists">Western Cape</li>
+            <li class="lists">Eastern Cape</li>
+        </ul>
+        <ul id="products">
+            <!-- cart items -->
+    
+        </ul>
+
+    </section>
+</body>
+</html>
