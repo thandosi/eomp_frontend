@@ -7,6 +7,7 @@
     <title>Register</title>
 
     <link rel="stylesheet" href="./styles/reg.css">
+    <script src="./styles/reg.js"></script>
 </head>
 <body class="body">
     <div class="reg">
@@ -14,38 +15,42 @@
           Register Form
         </div>
     
-        <form action="#">
+        <form onsubmit="register()">
           <div class="form-input">
-              <label></label>
-            <input type="text"  placeholder="Name">
+              <label for="client_name"></label>
+            <input id="client_name" type="text"  placeholder="Name">
           </div>
     
           <div class="form-input">
-              <label></label>
-            <input type="text" placeholder="Surname" >
+              <label for="client_surname"></label>
+            <input id="client_surname" type="text" placeholder="Surname" >
           </div>
           <div class="form-input">
-            <label></label>
-          <input type="text" placeholder="username" >
+            <label for="identity"></label>
+          <input id="identity" type="number" placeholder="Id number" >
+        </div>
+          <div class="form-input">
+            <label for="client_username"></label>
+          <input id="client_username" type="text" placeholder="username" >
           </div>
           <div class="form-input">
-            <label></label>
-          <input type="password" placeholder="type password" >
+            <label for="client_password"></label>
+          <input id="client_password" type="password" placeholder="type password" >
           </div>
           <div class="form-input">
             <label for="address"></label>
-          <input type="text" placeholder="adress" >
+          <input id="address" type="text" placeholder="adress" >
           </div>
           <div class="form-input">
-            <label for="client_bumber"></label>
-          <input type="tel" placeholder="contact number" >
+            <label for="phone_number"></label>
+          <input id="phone_number" type="tel" placeholder="contact number" >
         </div>
         <div class="form-input">
             <label for="client_email"></label>
-          <input type="text" placeholder="email" >
+          <input id="client_email" type="text" placeholder="email" >
         </div>
     
-          <button>Register</button>
-        </form>
+          <button type="submit">Register</button>
+       </form>
 </body>
 </html>
