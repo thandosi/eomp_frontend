@@ -109,6 +109,13 @@ ul {
     padding: 5% 10%;
     gap: 30px;
   }
+
+  .fly {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+    gap: 30px;
+  }
   
   .products {
     width: 200px;
@@ -148,4 +155,20 @@ ul {
   .people{
     display: flex;
     gap: 7px;
+  }
+
+  /*admin page*/
+  .header{
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: royalblue;
+  }
+  
+
+  .edit{
+    background-color: rgb(109, 109, 201);
+  }
+
+  .fly{
+    min-height: 100vh;
   }
