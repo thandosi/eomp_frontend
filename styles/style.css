@@ -172,3 +172,106 @@ ul {
   .fly{
     min-height: 100vh;
   }
+
+  /*serach bar*/
+  
+  .flight {
+    padding: 20px;
+  }
+  .flight input, select {
+      color: #6B6A6A;
+  }
+
+  .flight-date{
+    background-color:#E2E0E0 ;
+    height: 20px;
+    color: gray;
+  }
+  
+  .info-box {
+    padding: 10px 0;
+    margin-top: 20px;
+    flex: 1;
+    border-right: 20px solid transparent;
+  }
+  .info-box:last-child {
+    border-right: none;
+  }
+
+  .info-box input[type=text], input[type=submit], select {
+    border: none;
+    outline: none;
+    background: #E2E0E0;
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    border-radius: 3px;
+  }
+  
+  #flight-type {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px dotted silver;
+  }
+  #flight-type .info-box {
+    flex: 0 1 25%;
+    display:flex;
+    align-items: center;
+  }
+  
+  #flight-depart {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted silver;
+  }
+  #flight-depart .info-box {
+    position: relative;
+  }
+  #depart-res, #arrive-res {
+    position: absolute;
+    background: #FFFFFF;
+  }
+  #depart-res p, #arrive-res p {
+    padding: 7px 2px;
+    border-bottom: 1px dotted silver;
+  }
+  #depart-res p:hover, #arrive-res p:hover {
+    background: #EDEDED;
+    cursor: pointer;
+  }
+  
+  #flight-dates {
+    display: flex;
+    border-bottom: 1px dotted silver;
+  }
+  
+  #flight-info {
+    display: flex;
+    border-bottom: 1px dotted silver;
+  }
+  
+  #flight-search .info-box {
+    display: flex;
+    justify-content: center;
+  }
+  #flight-search input[type=submit] {
+    background: #55AF3A;
+    color: white;
+    padding: 0;
+    height: 50px;
+    font-size: 1.2em;
+  }
+  
+  /* Calender */
+
+  #calender .nav {
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+
+

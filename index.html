@@ -28,7 +28,7 @@
                           <div class="from">
                               <label for="from_where"></label>
                               <select name="adults" id="adults" >
-                                <option value="0" aria-placeholder="arrival"></option>
+                                <option value="0" aria-placeholder="arrival">----from-----</option>
                                 <option value="1">Cape Town</option>
                                 <option value="2">East London</option>
                                 <option value="3">Johannessburg</option>
@@ -38,7 +38,7 @@
                           <div class="arrival">
                             <label for="to_where"></label>
                             <select name="adults" id="adults" >
-                                <option value="0" aria-placeholder="arrival"></option>
+                                <option value="0" aria-placeholder="arrival">----to----</option>
                                 <option value="1">Cape Town</option>
                                 <option value="2">East London</option>
                                 <option value="3">Johannessburg</option>
@@ -66,9 +66,12 @@
                             </select>
                         </div>
                         <div class="date">
-                            <label for="date"></label>
-                            <input class="f-input" type="text" placeholder="date">
-                        </div>
+                            <div class="flight-date">
+                                <input type="date">
+                                </div>
+                        
+                              </div>
+
                         <button id="btn" class="f-input">
                             <span>
                                 search

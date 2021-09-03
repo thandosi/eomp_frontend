@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/e1e5a6680b.js" crossorigin="anonymous"></script>
+  <script src="./try.js"></script>
+  <link rel="stylesheet" href="./try.css">
+</head>
+<body>
+  <div id="products"></div>
+  <table>
+      <tr>
+          <td>
+              <form action="https://boiling-mountain-18109.herokuapp.com/create-flights/"
+              method="POST"
+              onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                  <div>
+                      <label>airline</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                      <input type="text" name="airline" id="airline">
+                  </div>
+                  <div>
+                      <label>price</label>
+                      <input type="text" name="price" id="price">
+                  </div>
+                  <div>
+                      <label>from</label>
+                      <input type="text" name="from_where" id="from_where">
+                  </div>
+                  <div>
+                      <label>to</label>
+                      <input type="text" name="to_where" id="to_where">
+                  </div>
+                  <div>
+                      <label>duration</label>
+                      <input type="number" name="duration" id="duration">
+                  </div>
+                  <div>
+                      <label>takeoff</label>
+                      <input type="number" name="departure" id="departure">
+                  </div>
+                  <div>
+                      <label>arrival</label>
+                      <input type="number" name="arrival" id="arrival">
+                  </div>
+                  <div  class="form-action-buttons">
+                      <input type="submit" value="Submit">
+                  </div>
+              </form>
+          </td>
+          <td>
+              <table class="list" id="employeeList">
+                  <thead>
+                      <tr class="air">
+                          <th class="tble1">airline</th>
+                          <th class="tble2">price</th>
+                          <th class="tble3">from_where</th>
+                          <th class="tble4">to_where</th>
+                          <th class="tble5">duration</th>
+                          <th class="tble6">takeoff</th>
+                          <th class="table7">arrival</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody class="row">
+
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+  </table>
+</body>
+</html>

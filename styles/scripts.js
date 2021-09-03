@@ -34,6 +34,7 @@ function showproducts(products) {
 
 function clickFunction() {
   alert("Please register first");
+  window.location.href = "reg.html";
 }
 
 fetch("https://boiling-mountain-18109.herokuapp.com/get-flight/")
@@ -79,7 +80,7 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-flight/")
   // loging--------------------------------------------------------
 
   function login() {
-    fetch("https://still-brushlands-23193.herokuapp.com/users/", {
+    fetch("https://boiling-mountain-18109.herokuapp.com", {
       method: "POST",
       body: JSON.stringify({
         username: document.getElementById("auth_username").value,
