@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>booking</title>
 
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="./styles/scripts.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/scripts.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -86,11 +86,12 @@
           </div>
     </section>
     <section id="bnb">
-        <ul>
-            <li class="lists">all</li>
-            <li class="lists">Western Cape</li>
-            <li class="lists">Eastern Cape</li>
-        </ul>
+        <div class="button-container">
+            <button onclick="filterCards('All')">All</button>
+            <button onclick="filterCards('Cape Town')">Cape Town</button>
+            <button onclick="filterCards('East London')">East London</button>
+            <button onclick="filterCards('Port Elizabeth')">Port Elizabeth</button>
+          </div>
         <ul id="products">
             <!-- cart items -->
     

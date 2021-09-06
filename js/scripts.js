@@ -20,7 +20,8 @@ function showproducts(products) {
     <div class = "products" ">
         <img src="${product.image}" class = "product-images">
         <div class= "product-content">
-        <h4 class = "product-title"> ${product.price}</h4>
+        <h5 class = "address"> ${product.address}</h5>
+        <p class = "price"> ${product.price}</p>
         <p class = "product-price">${product.rooms} </p>
         <p class = "product-price">${product.bathroom} </p>
         <p class = "product-price">${product.parking} </p>
@@ -31,6 +32,7 @@ function showproducts(products) {
     
   });
 }
+
 
 function clickFunction() {
   alert("Please register first");
