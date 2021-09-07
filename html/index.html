@@ -18,6 +18,17 @@
             <li style="float:right"><a class="active" href="reg.html">Register</a></li>
             <li style="float:right"><a class="active" href="login.html">Login</a></li>
           </ul> 
+
+        <!---  <section>
+
+            <input id="searchTerm" type="text" placeholder="Search.." />
+              <button class="search-btn" onclick="searchForProducts()" type="submit">
+    
+                <i class="fas fa-search-location"></i>
+              </button>
+            <div id="products-container"></div>
+            <div id="cart"><p>You have no items in the cart</p></div>
+        </section>-->
           <div>
               <div class="land-content">
                   <div class="fill-in">
@@ -29,20 +40,20 @@
                               <label for="from_where"></label>
                               <select name="adults" id="adults" >
                                 <option value="0" aria-placeholder="arrival">----from-----</option>
-                                <option value="1">Cape Town</option>
-                                <option value="2">East London</option>
-                                <option value="3">Johannessburg</option>
-                                <option value="4">Port Elizabeth</option>
+                                <option class="selected" value="1">Cape Town</option>
+                                <option class="selected" value="2">East London</option>
+                                <option class="selected" value="3">Johannessburg</option>
+                                <option class="selected" value="4">Port Elizabeth</option>
                             </select>
                           </div>
                           <div class="arrival">
                             <label for="to_where"></label>
                             <select name="adults" id="adults" >
-                                <option value="0" aria-placeholder="arrival">----to----</option>
-                                <option value="1">Cape Town</option>
-                                <option value="2">East London</option>
-                                <option value="3">Johannessburg</option>
-                                <option value="4">Port Elizabeth</option>
+                                <option class="selected" value="0" aria-placeholder="arrival">----to----</option>
+                                <option class="selected" value="1">Cape Town</option>
+                                <option class="selected" value="2">East London</option>
+                                <option class="selected" value="3">Johannessburg</option>
+                                <option class="selected" value="4">Port Elizabeth</option>
                             </select>
                         </div>
                         <div class="people">
@@ -72,7 +83,7 @@
                         
                               </div>
 
-                        <button id="btn" class="f-input">
+                        <button id="btn" class="f-input" onclick="selected()">
                             <span>
                                 search
                             </span>
@@ -98,5 +109,6 @@
         </ul>
 
     </section>
+    
 </body>
 </html>

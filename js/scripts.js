@@ -10,6 +10,16 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-hotels/")
     products = data;
     showproducts(products);
   });
+  users=[]
+  fetch("https://boiling-mountain-18109.herokuapp.com/get-borders/")
+  .then((res) => res.json())
+  .then((data) => {
+    // console.log(data);
+    users = data.data
+    console.log("Users",users.length)
+    // products = data;
+    // showproducts(products);
+  });
 
 //* Show-Profucts Button*//
 function showproducts(products) {
@@ -31,6 +41,79 @@ function showproducts(products) {
     `;
     
   });
+}
+ // adding to cart
+function addToCart(prod_id) {
+  console.log(products.data);
+  let product = products.data.find((item) => {
+    return item.prod_id == prod_id;
+  });
+  
+  cart.push(product);
+  
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart(storedCartitems);
+  
+  console.log(prod_id);
+  
+  
+}
+
+// function to show items in the cart
+function renderCart(cartItems) {
+  let cartContainer = document.querySelector("#cart");
+  cartContainer.innerHTML = "";
+  if (cartItems.length > 0) {
+    cartItems.map((cartItem) => {
+      cartContainer.innerHTML += `
+      <div class = "products">
+            <img src="${cartItem.image}" class = "product-image">
+            <div class = "product-content"> 
+            <h5 class = "address"> ${product.address}</h5>
+            <p class = "price"> ${product.price}</p>
+            <p class = "product-price">${product.rooms} </p>
+            <p class = "product-price">${product.bathroom} </p>
+            <p class = "product-price">${product.parking} </p>
+            <button onclick="clickFunction()(${product.id})"> book now</button>
+            </div>
+            
+        </div>
+      
+      
+      `;
+    });
+    let totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+    cartContainer.innerHTML += `<h3> Your total is: ${totalPrice} </h3>`;
+  } else {
+    cartContainer.innerHTML = "<h2> No items in cart</h2>";
+  }
+}
+
+function toggleCart() {
+  document.querySelector("#cart").classList.toggle("active");
+}
+
+//searching
+
+function searchPost(){
+  let searchTerm = document.querySelector("#search-post").value 
+  let showError = document.querySelector("#post-search-error")
+  console.log(searchTerm)
+
+  // filter over posts
+  let postSearched = arrPosts.filter( (post) => 
+  post.title.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+  showError.innerHTML = "";
+  if (postSearched.length == 0){
+      showError.innerHTML = "Post does not exists"
+  }
+  else if (searchTerm === "") {
+      showError.innerHTML = "Input is empty"
+  } 
+  else{
+      displayPosts(postSearched)
+  }
 }
 
 
@@ -54,15 +137,16 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-flight/")
       body: JSON.stringify({
         client_name: document.getElementById("client_name").value,
         client_surname: document.getElementById("client_surname").value,
-        client_id : document.getElementById("identity").value,
         client_username: document.getElementById("client_username").value,
         client_password: document.getElementById("client_password").value,
         address: document.getElementById("address").value,
         phone_number: document.getElementById("phone_number").value,
         client_email: document.getElementById("client_email").value,
+        flight_id : Users.length + 1,
       }),
       headers: {
-        "Content-type": "application/json"
+        "Content-type": "application/json",
+        'Access-Control-Allow-Origin': '*'
         
       },
     })
@@ -90,6 +174,7 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-flight/")
       }),
       headers: {
         "Content-type": "application/json",
+
       },
     })
       .then((response) => response.json())
@@ -114,4 +199,19 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-flight/")
             window.location.href = "./products.html";
           }
         });
+    }
+
+    //search
+
+    function selected() {
+      let searchTerm = document.querySelector(".selected").value;
+      console.log(searchTerm);
+      console.log(products);
+      let searchedProducts = products.filter((product) => 
+        product.product_type.toLowerCase().includes(searchTerm.toLowerCase())
+      
+      );
+      console.log(searchedProducts);
+      make_products(searchedProducts);
+    
     }

@@ -58,46 +58,8 @@ function insertNewRecord(data) {
     var table = document.getElementById("flights").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
     cell1 = newRow.insertCell(0);
-    cell1.innerHTML = <td class = "product-price">${product.from_where} </td>;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    cell2 = newRow.insertCell();
+    cell1.innerHTML = newRow.insertRow(0)  
+    cell2 = newRow.insertCell(1);
     cell2.innerHTML = product.price;
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = product.from_where;
@@ -211,7 +173,7 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-hotels/")
 
 //* Show-Profucts Button*//
 function showproducts(products) {
-  let product_container = document.querySelector(".hotels");
+  let product_container = document.querySelector("#products");
   let tble1 = document.querySelector(".tble1");
   product_container.innerHTML = "";
   products.data.forEach((product) => {
