@@ -14,22 +14,18 @@
       Login Form
     </div>
 
-    <form action="#">
-      <div class="fild">
-        <input type="text"  placeholder="username">
-        <label>username</label>
+    <form >
+      <div class="values">
+        <input class="username" type="text"  placeholder="username">
+        <label for="username">username</label>
       </div>
 
-      <div class="fild">
-        <input type="password" placeholder="type password" >
-        <label>Password</label>
+      <div class="values">
+        <input class="password" type="password" placeholder="type password" >
+        <label for="password">Password</label>
       </div>
 
-      <div class="forget-pass">
-        <a href="#">Forget password</a>
-      </div>
-
-      <button>Sign in</button>
+      <button onclick="login()">Sign in</button>
 
       <div class="signup">
         Not a member?
