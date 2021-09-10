@@ -129,78 +129,6 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-flight/")
     products = data;
   });
 
-  // register--------------------------------------------------
-
-  function register() {
-    fetch("https://boiling-mountain-18109.herokuapp.com/client-registration/", {
-      method: "POST",
-      body: JSON.stringify({
-        client_name: document.getElementById("client_name").value,
-        client_surname: document.getElementById("client_surname").value,
-        client_username: document.getElementById("client_username").value,
-        client_password: document.getElementById("client_password").value,
-        address: document.getElementById("address").value,
-        phone_number: document.getElementById("phone_number").value,
-        client_email: document.getElementById("client_email").value,
-        flight_id : Users.length + 1,
-      }),
-      headers: {
-        "Content-type": "application/json",
-        'Access-Control-Allow-Origin': '*'
-        
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        if (data["status_code"] == 200) {
-          alert("Registered successfully!, please log in.");
-          window.location.href = "login.html";
-        } else {
-          alert("Please enter correct information");
-          
-        }
-      });
-  }
-
-  // loging--------------------------------------------------------
-
-  function login() {
-    fetch("https://boiling-mountain-18109.herokuapp.com", {
-      method: "POST",
-      body: JSON.stringify({
-        username: document.getElementById("auth_username").value,
-        password: document.getElementById("auth_password").value,
-      }),
-      headers: {
-        "Content-type": "application/json",
-
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        if (data["description"] == "Invalid credentials") {
-          alert(
-            "Username or password is incorrect. Please enter correct details"
-          );
-        } else {
-          console.log(data["access_token"]);
-          mystorage.setItem("jwt-token", data["access_token"]);
-          myuser.setItem(
-            "auth_username",
-            document.getElementById("auth_username")
-            );
-            mypass.setItem(
-              "auth_password",
-              document.getElementById("auth_password")
-            );
-    
-            window.location.href = "./products.html";
-          }
-        });
-    }
-
     //search
 
     function selected() {
@@ -215,3 +143,52 @@ fetch("https://boiling-mountain-18109.herokuapp.com/get-flight/")
       make_products(searchedProducts);
     
     }
+
+    // filter
+
+    // seaarch for cape town
+function capeTown() {
+  let searchTerm = "cape town";
+  console.log(searchTerm);
+  console.log(products);
+  let searchedProducts = products.filter((product) => 
+    product.product_type.toLowerCase().includes(searchTerm.toLowerCase())
+  
+  );
+  console.log(searchedProducts);
+  make_products(searchedProducts);
+
+}
+// search for pe
+function portElizabeth() {
+  let searchTerm = "port elizabeth";
+  console.log(searchTerm);
+  console.log(products);
+  let searchedProducts = products.filter((product) => 
+    product.product_type.toLowerCase().includes(searchTerm.toLowerCase())
+  
+  );
+  console.log(searchedProducts);
+  make_products(searchedProducts);
+
+}
+
+//search for mthatha
+
+function mthatha() {
+  let searchTerm = "mthatha";
+  console.log(searchTerm);
+  console.log(products);
+  let searchedProducts = products.filter((product) => 
+    product.product_type.toLowerCase().includes(searchTerm.toLowerCase())
+  
+  );
+  console.log(searchedProducts);
+  make_products(searchedProducts);
+
+}
+
+// function to refresh page
+function showAll(){
+  location.reload();
+}

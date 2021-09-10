@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/logged.css">
     <script src="/js/logged.js"></script>
+    <script src="https://kit.fontawesome.com/e1e5a6680b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="landing">
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#bnb">Accomodation</a></li>
-            <li style="float:right"><a class="active" href="#">Log out</a></li>
+            <li><a href="#products">Accomodation</a></li>
+            <li style="float:right"><a class="active" href="index.html">Log out</a></li>
             <li style="float:right"><a class="active" href="reg.html">checkout</a></li>
           </ul> 
           <div>
@@ -78,19 +79,25 @@
                         </button>
                       </form>
                   </div>
-                  <div class="about">
-                      <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, quasi dolore ratione ex ad corporis obcaecati quia nam, sequi provident harum deleniti, velit asperiores earum fugiat perspiciatis nisi consectetur odio?</p>
-                  </div>
               </div>
           </div>
     </section>
-    <section id="bnb">
-        <div class="button-container">
-            <button onclick="filterCards('All')">All</button>
-            <button onclick="filterCards('Cape Town')">Cape Town</button>
-            <button onclick="filterCards('East London')">East London</button>
-            <button onclick="filterCards('Port Elizabeth')">Port Elizabeth</button>
-          </div>
+    <section>
+		<div class="filters">
+
+			<input id="searchTerm" type="text" placeholder="Search.." />
+      		<button class="search-btn" onclick="searchForProducts()" type="submit">
+		  
+	
+				<i class="fas fa-search-location"></i>
+		  	</button>
+		  	<button onclick="showAll()" class="all">ALL</button>
+	
+		  	<button onclick="capeTown()" class="cpt">Cape Town</button>
+		  	<button onclick="mthatha()" class="mthatha">Mthamtha</button>
+            <button onclick="portElizabeth()" class="pe">Port Elizabeth</button>
+		</div>
+	  </section>
         <ul id="products">
         </ul>
 

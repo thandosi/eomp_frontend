@@ -33,7 +33,7 @@ function register() {
     .then((data) => {
       console.log(data);
       if (data["status_code"] == 200) {
-        alert("Registered successfully!, please log in.");
+        alert("Registered successfully!, please log in..");
       } else {
         alert("Please enter correct information");
         

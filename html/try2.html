@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <div class="topnav">
+        <div class="topsidenav">
+          
+        </div>
+          <a class="active" href="/index.html#slideshow-container">Home</a>
+          <a href="/index.html#about-section">About</a>
+          <a href="/add player profile.html">Player Profiles</a>
+          <a href="/index.html#contact">Contact Us</a>
+        </div> 
+   
+</head>
+<body>
+    <!--Create flights-->
+    <div class="container">
+        <form id="form-container" onsubmit="event.preventDefault(), addProfile()">
+            <div class="heading">
+            </div>
+                <div class="add-profile">
+                <div class="field">
+                    <label for="Airline" class="header" class="form-label">Airline</label>
+                    <input class="f-input" type="text" name="Airline" id="Airline" required placeholder="Airline">
+                </div>
+                <div class="field">
+                    <label for="price" class="header" class="form-label">price</label>
+                    <input class="f-input" type="text" name="price" id="price" required placeholder="price">
+                </div>
+                <div class="form-group">
+                    <label for="from_where" class="header" class="form-label">from_where</label>
+                    <input class="f-input" type="text" name="from_where" id="from_where" required placeholder="from_where">
+                </div>
+                <div class="form-group">
+                    <label for="to_where" class="header" class="form-label">to_where</label>
+                    <input class="f-input" type="text" name="to_where" id="to_where" required placeholder="to_where">
+                </div>
+
+                <div class="form-group">
+                    <label for="duration" class="header" class="form-label">duration</label>
+                    <input class="form-input" type="text" name="duration" id="duration" required placeholder="duration">
+                </div>
+
+                <div class="form-group">
+                    <label for="departure" class="header" class="form-label">departure</label>
+                    <input class="form-input" type="text" name="departure" id="departure" required placeholder="departure">
+                </div>
+
+                <div class="form-group">
+                    <label for="arrival" class="header" class="form-label">arrival</label>
+                    <input class="form-input" type="text" name="arrival" id="arrival" required placeholder="arrival">
+                </div>
+
+        
+                <button type="submit" class="button">submit</button>
+            </div>
+            </form>
+    <!--End of Create Profile-->
+
+
+    
+    <script src="./create profile.js"></script>
+  
+</body>
+</html>

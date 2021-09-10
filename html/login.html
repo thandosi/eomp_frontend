@@ -16,16 +16,16 @@
 
     <form >
       <div class="values">
-        <input class="username" type="text"  placeholder="username">
+        <input id="username" type="text"  placeholder="username">
         <label for="username">username</label>
       </div>
 
       <div class="values">
-        <input class="password" type="password" placeholder="type password" >
+        <input id="password" type="password" placeholder="type password" >
         <label for="password">Password</label>
       </div>
 
-      <button onclick="login()">Sign in</button>
+      <button onclick="event.preventDefault(), onclick=login()">Sign in</button>
 
       <div class="signup">
         Not a member?

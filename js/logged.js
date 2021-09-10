@@ -65,8 +65,8 @@ function searchItems() {
 
 
 function addToCart(id) {
-  let product = products.data.find((item) => {
-    return (item.id = id);
+  let product = products.data.find((product) => {
+    return (product.id = id);
 });
   console.log(product);
   cart.push(product);

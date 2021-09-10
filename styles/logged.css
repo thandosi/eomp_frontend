@@ -1,0 +1,275 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#landing{
+  min-height: 100vh;
+  background-image:url(/images/Outrigger.jpg);
+}
+.bnb{
+  min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:royalblue;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .land-content{
+    display: flex;
+    padding: 80px;
+    margin: 0 auto;
+  }
+
+  .fill-in{
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 50%;
+    min-height: 100vh;
+  }
+
+
+  .lorem{
+    padding: 148px;
+  }
+
+  form{
+    padding: 139px;
+    display: flex;
+     flex-direction: column;
+     gap: 10px;
+  }
+
+  .lists{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+    
+  .btn{
+    height: 30px;
+    border-radius: 5px;
+    width: 58px;
+  }
+  
+
+  .heading{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+  }
+  
+  .list{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightslategray;
+    margin-top: 30px;
+    height: 27px;
+    list-style: none;
+  }
+  
+  /* products */
+  #products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+    gap: 30px;
+  }
+
+  .fly {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+    gap: 30px;
+  }
+  
+  .products {
+    width: 200px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .product-images {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    padding: 20px;
+  }
+  
+  .product-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form .btns{
+    margin: 30px 0;
+    min-height: 45px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #btn {
+    width: 87px;
+    text-align: center;
+  }
+
+  .people{
+    display: flex;
+    gap: 7px;
+  }
+
+  /*admin page*/
+  .header{
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: royalblue;
+  }
+  
+
+  .edit{
+    background-color: rgb(109, 109, 201);
+  }
+
+  .fly{
+    min-height: 100vh;
+  }
+
+  /*serach bar*/
+  
+  .flight {
+    padding: 20px;
+  }
+  .flight input, select {
+      color: #6B6A6A;
+  }
+
+  .flight-date{
+    background-color:#E2E0E0 ;
+    height: 20px;
+    color: gray;
+  }
+  
+  .info-box {
+    padding: 10px 0;
+    margin-top: 20px;
+    flex: 1;
+    border-right: 20px solid transparent;
+  }
+  .info-box:last-child {
+    border-right: none;
+  }
+
+  .info-box input[type=text], input[type=submit], select {
+    border: none;
+    outline: none;
+    background: #E2E0E0;
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    border-radius: 3px;
+  }
+  
+  #flight-type {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px dotted silver;
+  }
+  #flight-type .info-box {
+    flex: 0 1 25%;
+    display:flex;
+    align-items: center;
+  }
+  
+  #flight-depart {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted silver;
+  }
+  #flight-depart .info-box {
+    position: relative;
+  }
+  #depart-res, #arrive-res {
+    position: absolute;
+    background: #FFFFFF;
+  }
+  #depart-res p, #arrive-res p {
+    padding: 7px 2px;
+    border-bottom: 1px dotted silver;
+  }
+  #depart-res p:hover, #arrive-res p:hover {
+    background: #EDEDED;
+    cursor: pointer;
+  }
+  
+  #flight-dates {
+    display: flex;
+    border-bottom: 1px dotted silver;
+  }
+  
+  #flight-info {
+    display: flex;
+    border-bottom: 1px dotted silver;
+  }
+  
+  #flight-search .info-box {
+    display: flex;
+    justify-content: center;
+  }
+  #flight-search input[type=submit] {
+    background: #55AF3A;
+    color: white;
+    padding: 0;
+    height: 50px;
+    font-size: 1.2em;
+  }
+  
+  /* Calender */
+
+  #calender .nav {
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .button-container{
+    background-color: royalblue;
+    
+  }

@@ -1,6 +1,18 @@
 let user = window.localStorage;
+
+Users=[]
+fetch("https://boiling-mountain-18109.herokuapp.com/get-passengers/")
+.then((res) => res.json())
+.then((data) => {
+  users = data.data
+  console.log(data)
+  console.log("Users",users.length)
+ 
+});
+
+
 function login() {
-    fetch("https://boiling-mountain-18109.herokuapp.com/auth", {
+    fetch('https://boiling-mountain-18109.herokuapp.com/get-passengers/', {
       method: "POST",
       body: JSON.stringify({
         username: document.getElementById("username").value,
@@ -14,12 +26,10 @@ function login() {
       .then((data) => {
         console.log(data);
         if (data["description"] == "Invalid credentials") {
-          alert("invalid cedentials")
-          window.location.href = ".log.html";
-          
+          alert("invalid cedentials")          
           
         } else {
-          
+          alert('You have successfully logged in')
           window.location.href ="./logged.html";
         }
       });

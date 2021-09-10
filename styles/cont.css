@@ -1,0 +1,49 @@
+#contact-form {
+    background:royalblue;
+    width: 300px;
+    border-radius: 10px;
+    padding: 2% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    background-image: url(/images/Outrigger.jpg);
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: white;
+    background-size: cover;
+  }
+  
+  .label {
+    display: none;
+    color: white;
+  }
+  
+  .button {background: white;
+      border-radius: 10px;
+      border: 1px solid black;
+      padding: 10px;
+      font-family: sans-serif;
+  
+  
+  }
+  .form-input {
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid black; 
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+  .heading{
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.5);
+  }

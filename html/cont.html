@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/cont.css">
+</head>
+<body>
+    <form
+    id="contact-form"
+    action="https://formspree.io/f/mpzkkgyn"
+    method="POST"
+  >
+    <div>
+      <h1 class="heading">Contact Us</h1>
+    </div>
+    <div>
+      <label class="label" for="name">Full Name</label>
+      <input class="form-input" name="name" id="name" required placeholder="Full Name" />
+    </div>
+    <label class="label" for="your email">Your email</label>
+    <input class="form-input"
+      name="your email"
+      id="your email"
+      required
+      placeholder="example@gmail.com"
+    />
+    <div>
+      <label class="label" for="number">Contact Number</label>
+      <input class="form-input" type="tel" id="number" required placeholder="081 246 3691" />
+    </div>
+    <div>
+      <div>
+        <label class="label" for="your message">Your message:</label>
+        <textarea class="form-input"
+          name="your massage"
+          id="your message"
+          required
+          placeholder="type in your message"
+        ></textarea>
+      </div>
+      <div>
+        <label class="label" for="contact"></label>
+      </div>
+    </div>
+
+    <!-- your other form fields go here -->
+
+    <button class="button" type="submit">Send</button>
+  </form>
+</body>
+</html>
